@@ -28,8 +28,8 @@ public class Main {
     }
 
     private static void newGame() {
-        new Game();
-
+        Game gra = new Game();
+        gra.game();
 
 
     }
