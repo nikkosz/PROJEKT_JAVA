@@ -8,4 +8,5 @@ public class Plants {
     public Double seed_price;
     public Integer grow_Time;
     public Integer calories;
+    public Double fertilizer_needed;
 }
