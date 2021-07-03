@@ -13,13 +13,19 @@ public class Player {
 
     }
     public void setCash(double price){
-        if(price >=0.0){
+        if(this.cash== null ){
+            this.cash = price;
+        }
 
-            this.cash += price;
-        }else {
+        else if(price <=0.0){
             this.cash -= price;
         }
+        else {
+            this.cash += price;
+        }
     }
+
+
 
 
 
