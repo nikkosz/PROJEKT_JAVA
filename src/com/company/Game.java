@@ -62,9 +62,15 @@ public class Game {
                 if(gen.price == cash_gracza){
                     System.out.println("No to masz ziemie, ale nic poza tym.");
                 }else if(gen.price < cash_gracza){
-                    System.out.println("Kupiłeś i coś jeszcze w tej sakiwece jest :D");
+                    System.out.println("Kupiłeś i coś jeszcze w tej sakiewce jest :D");
 
                     gracz.setCash(cash_gracza-gen.price);
+
+                    Ziemia myZiemia = new Ziemia(gen2.size, gen2.quality, "None");
+
+
+
+
                 }else{
                     System.out.println("Sory brachu, ale Cię nie stać");
                 }
@@ -74,9 +80,14 @@ public class Game {
                 if(gen1.price == cash_gracza){
                     System.out.println("No to masz ziemie, ale nic poza tym.");
                 }else if(gen1.price < cash_gracza){
-                    System.out.println("Kupiłeś i coś jeszcze w tej sakiwece jest :D");
+                    System.out.println("Kupiłeś i coś jeszcze w tej sakiewce jest :D");
 
                     gracz.setCash(cash_gracza-gen1.price);
+
+                    Ziemia myZiemia = new Ziemia(gen2.size, gen2.quality, "None");
+
+
+
                 }else{
                     System.out.println("Sory brachu, ale Cię nie stać");
                 }
@@ -85,9 +96,15 @@ public class Game {
                 if(gen2.price == cash_gracza){
                     System.out.println("No to masz ziemie, ale nic poza tym.");
                 }else if(gen2.price < cash_gracza){
-                    System.out.println("Kupiłeś i coś jeszcze w tej sakiwece jest :D");
+                    System.out.println("Kupiłeś i coś jeszcze w tej sakiewce jest :D");
 
                     gracz.setCash(cash_gracza- gen2.price);
+
+                    Ziemia myZiemia = new Ziemia(gen2.size, gen2.quality, "None");
+
+
+
+
                 }else{
                     System.out.println("Sory brachu, ale Cię nie stać");
                 }
@@ -96,7 +113,12 @@ public class Game {
         }
 
 
-
+        //// No to czas na Main Game;
+        System.out.println("Co chciałbyś zrobic?");
+        System.out.println("-----------------------");
+        System.out.println("1. Praca w polu");
+        System.out.println("2. Praca przy zwierzętach");
+        System.out.println("3. Zakupy/sprzedaż");
 
 
 
@@ -108,4 +130,12 @@ public class Game {
 
         return wybor;
     }
+
+
+
+
+
+
+
 }
+

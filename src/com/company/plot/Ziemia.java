@@ -6,4 +6,6 @@ public class Ziemia {
     public String buildings;
 
 
+    public Ziemia(double size, String quality, String none) {
+    }
 }
