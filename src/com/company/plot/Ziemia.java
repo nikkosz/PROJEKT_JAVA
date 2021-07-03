@@ -5,4 +5,5 @@ public class Ziemia {
     public String quality;
     public String buildings;
 
+
 }

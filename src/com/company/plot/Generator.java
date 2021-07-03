@@ -11,7 +11,8 @@ public class Generator {
     public void generate(){
         Random rand = new Random();
         double maxSize= 4000.00;
-        double size_rand = rand.nextDouble();
+        double minSize = 50.00;
+        double size_rand = minSize + (maxSize - minSize) * rand.nextDouble();
         this.size = size_rand;
 
     }
@@ -19,7 +20,7 @@ public class Generator {
         Random rand = new Random();
         int maxQuality = 5;
 
-        Q_Rand = rand.nextInt();
+        Q_Rand = rand.nextInt(maxQuality);
         switch (Q_Rand){
             case 0:
                 this.quality = "CZY TO JEST POWAŻNE?";
@@ -44,8 +45,9 @@ public class Generator {
 
     public void setPrice(){
         Random rand = new Random();
-        double max_Price = 1000000.00;
-        double new_price = rand.nextDouble();
+        double max_Price = 500000.00;
+        double min_Price = 10000.00;
+        double new_price = min_Price + (max_Price - min_Price) * rand.nextDouble();
 
         if(size >= 500){
             if(new_price<= 20000){
@@ -83,6 +85,7 @@ public class Generator {
 
             }
         }
+        this.price = new_price;
     }
 
 
