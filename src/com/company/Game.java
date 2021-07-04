@@ -3,8 +3,11 @@ package com.company;
 import java.io.IOException;
 import java.util.Scanner;
 import com.company.entitity.Player;
+import com.company.entitity.Shop;
 import com.company.plot.Generator;
 import com.company.plot.Ziemia;
+import com.company.worktype.Feeding;
+import com.company.worktype.Planting;
 import sun.nio.cs.Surrogate;
 
 
@@ -120,7 +123,22 @@ public class Game {
         System.out.println("2. Praca przy zwierzętach");
         System.out.println("3. Zakupy/sprzedaż");
 
-
+        int wyborDzialania;
+        wyborDzialania = menu2();
+        switch (wyborDzialania){
+            case 1:
+                    Planting plant = new Planting();
+                    System.out.println("Co byś chciał zasadzic:");
+                break;
+            case 2:
+                Feeding feed = new Feeding();
+                System.out.println("No to co? karmimy?");
+                break;
+            case 3:
+                    Shop buyOrSell = new Shop();
+                    System.out.println("Jedziemy do sklepu!!!!");
+                break;
+        }
 
 
 
