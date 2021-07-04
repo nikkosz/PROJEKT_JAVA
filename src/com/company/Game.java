@@ -2,6 +2,8 @@ package com.company;
 
 import java.io.IOException;
 import java.util.Scanner;
+
+import com.company.entitity.Inventory;
 import com.company.entitity.Player;
 import com.company.entitity.Shop;
 import com.company.plot.Generator;
@@ -122,6 +124,7 @@ public class Game {
         System.out.println("1. Praca w polu");
         System.out.println("2. Praca przy zwierzętach");
         System.out.println("3. Zakupy/sprzedaż");
+        System.out.println("4. Ekwipunek");
 
         int wyborDzialania;
         wyborDzialania = menu2();
@@ -129,14 +132,22 @@ public class Game {
             case 1:
                     Planting plant = new Planting();
                     System.out.println("Co byś chciał zasadzic:");
+                //DODAC FUNKCJONALNOSC - Planting
                 break;
             case 2:
                 Feeding feed = new Feeding();
                 System.out.println("No to co? karmimy?");
+                //DODAC FUNKCJONALNOSC - Feeding
                 break;
             case 3:
                     Shop buyOrSell = new Shop();
                     System.out.println("Jedziemy do sklepu!!!!");
+                    //DODAC FUNKCJONALNOSC - Shop
+                break;
+            case 4:
+                Inventory invent = new Inventory();
+                System.out.println("Zobaczmy co tam jeszzcze mamy");
+                //DODAC FUNKCJONAlNOSC - Inventory
                 break;
         }
 
