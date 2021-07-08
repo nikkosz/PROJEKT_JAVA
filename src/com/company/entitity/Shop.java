@@ -1,4 +1,6 @@
 package com.company.entitity;
 
-public class Shop {
+import com.company.entitity.Player;
+
+public class Shop extends Inventory{
 }
