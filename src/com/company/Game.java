@@ -76,7 +76,7 @@ public class Game {
 
                     Ziemia myZiemia = new Ziemia(gen2.size, gen2.quality, "None");
 
-
+                    MainGame();
 
 
                 }else{
@@ -94,7 +94,7 @@ public class Game {
 
                     Ziemia myZiemia = new Ziemia(gen2.size, gen2.quality, "None");
 
-
+                    MainGame();
 
                 }else{
                     System.out.println("Sory brachu, ale Cię nie stać");

@@ -18,6 +18,7 @@ public class Main {
             System.out.println("Zaczynając od podstaw kupujemy więcej ziemi, zarabiamy, a także i tracimy");
             System.out.println("Have fun!!!");
             System.out.println("Napisał: Nikodem Kosznik 53535");
+
             break;
         case 3:
             System.exit(0);
