@@ -41,20 +41,23 @@ public class Game {
         gen2.generate_quality();
         gen2.setPrice();
 
-
+        System.out.println("-----------------------------");
         System.out.println("Działka numer 1:");
         System.out.println("Wielkość: "+ gen.size +" a.");
         System.out.println("Cena: "+ gen.price+ " cebulionów");
         System.out.println("Jakość gruntu: "+gen.quality);
+        System.out.println("-----------------------------");
         System.out.println("Działka numer 2:");
         System.out.println("Wielkość: "+ gen1.size +"a.");
         System.out.println("Cena: "+ gen1.price+ " cebulionów");
         System.out.println("Jakość gruntu: "+gen1.quality);
+        System.out.println("-----------------------------");
         System.out.println("Działka numer 3:");
         System.out.println("Wielkość: "+ gen2.size +"a.");
         System.out.println("Cena: "+ gen2.price+ " cebulionów");
         System.out.println("Jakość gruntu: "+gen2.quality);
         System.out.println("To czas kupić ;)");
+        System.out.println("-----------------------------");
 
 
         int wyborDzialki;
