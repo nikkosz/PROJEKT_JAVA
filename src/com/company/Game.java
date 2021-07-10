@@ -106,7 +106,7 @@ public class Game {
                     gracz.setCash(cash_gracza- gen2.price);
 
                     Ziemia myZiemia = new Ziemia(gen2.size, gen2.quality, "None");
-
+                    MainGame();
 
 
 
@@ -118,38 +118,54 @@ public class Game {
         }
 
 
-        //// No to czas na Main Game;
-        System.out.println("Co chciałbyś zrobic?");
-        System.out.println("-----------------------");
-        System.out.println("1. Praca w polu");
-        System.out.println("2. Praca przy zwierzętach");
-        System.out.println("3. Zakupy/sprzedaż");
-        System.out.println("4. Ekwipunek");
 
-        int wyborDzialania;
-        wyborDzialania = menu2();
-        switch (wyborDzialania){
-            case 1:
+    }
+
+    public void MainGame() {
+
+            //// No to czas na Main Game;
+            System.out.println("Co chciałbyś zrobic?");
+            System.out.println("-----------------------");
+            System.out.println("1. Praca w polu");
+            System.out.println("2. Praca przy zwierzętach");
+            System.out.println("3. Zakupy/sprzedaż");
+            System.out.println("4. Ekwipunek");
+            System.out.println("5. Następny tydzień");
+            System.out.println("6. Wyjście z gry");
+
+            int wyborDzialania;
+            wyborDzialania = menu2();
+            switch (wyborDzialania) {
+                case 1:
                     Planting plant = new Planting();
                     System.out.println("Co byś chciał zasadzic:");
-                //DODAC FUNKCJONALNOSC - Planting
-                break;
-            case 2:
-                Feeding feed = new Feeding();
-                System.out.println("No to co? karmimy?");
-                //DODAC FUNKCJONALNOSC - Feeding
-                break;
-            case 3:
+                    //DODAC FUNKCJONALNOSC - Planting
+                    break;
+                case 2:
+                    Feeding feed = new Feeding();
+                    System.out.println("No to co? karmimy?");
+                    //DODAC FUNKCJONALNOSC - Feeding
+                    break;
+                case 3:
                     Shop buyOrSell = new Shop();
                     System.out.println("Jedziemy do sklepu!!!!");
                     //DODAC FUNKCJONALNOSC - Shop
-                break;
-            case 4:
-                Inventory invent = new Inventory();
-                System.out.println("Zobaczmy co tam jeszzcze mamy");
-                //DODAC FUNKCJONAlNOSC - Inventory
-                break;
-        }
+                    break;
+                case 4:
+                    Inventory invent = new Inventory();
+                    System.out.println("Zobaczmy co tam jeszzcze mamy");
+                    //DODAC FUNKCJONAlNOSC - Inventory
+                    break;
+                case 5:
+                    MainGame();
+                    //dodać outcome - progress
+                    //dodac czas
+                    //Powrót o tydzien pozniej
+                    break;
+                case 6:
+                    System.out.println("Koniec gry");
+                    break;
+            }
 
 
 
@@ -158,8 +174,8 @@ public class Game {
         //////////////////////////////////////////////////////////////////////
 
 
-
     }
+
     public static int menu2(){
         int wybor;
         Scanner input = new Scanner(System.in);

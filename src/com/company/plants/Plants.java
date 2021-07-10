@@ -9,4 +9,5 @@ public class Plants {
     public Integer grow_Time;
     public Integer calories;
     public Double fertilizer_needed;
+
 }
