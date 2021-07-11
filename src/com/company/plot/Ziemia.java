@@ -7,5 +7,7 @@ public class Ziemia {
 
 
     public Ziemia(double size, String quality, String none) {
+
+
     }
 }

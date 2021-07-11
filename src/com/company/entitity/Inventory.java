@@ -27,6 +27,11 @@ public class Inventory {
         }
 
     }
+    public void getAll(){
+        for(int i =0; i<Invent.size(); i++){
+            System.out.println(Invent.get(i));
+        }
+    }
 
 
 

@@ -9,6 +9,7 @@ import com.company.entitity.Shop;
 import com.company.plot.Generator;
 import com.company.plot.Ziemia;
 import com.company.worktype.Feeding;
+import com.company.worktype.Harvesting;
 import com.company.worktype.Planting;
 import sun.nio.cs.Surrogate;
 
@@ -125,7 +126,8 @@ public class Game {
     }
 
     public void MainGame() {
-
+            int timeProgress=0;
+            // every 1 timeProgress = one whole weeek
             //// No to czas na Main Game;
             System.out.println("Co chciałbyś zrobic?");
             System.out.println("-----------------------");
@@ -133,8 +135,9 @@ public class Game {
             System.out.println("2. Praca przy zwierzętach");
             System.out.println("3. Zakupy/sprzedaż");
             System.out.println("4. Ekwipunek");
-            System.out.println("5. Następny tydzień");
-            System.out.println("6. Wyjście z gry");
+            System.out.println("5. Zbiory!!!!");
+            System.out.println("6. Następny tydzień");
+            System.out.println("7. Wyjście z gry");
 
             int wyborDzialania;
             wyborDzialania = menu2();
@@ -142,6 +145,9 @@ public class Game {
                 case 1:
                     Planting plant = new Planting();
                     System.out.println("Co byś chciał zasadzic:");
+
+
+
                     //DODAC FUNKCJONALNOSC - Planting
                     break;
                 case 2:
@@ -157,15 +163,24 @@ public class Game {
                 case 4:
                     Inventory invent = new Inventory();
                     System.out.println("Zobaczmy co tam jeszzcze mamy");
-                    //DODAC FUNKCJONAlNOSC - Inventory
+                    invent.getAll();
                     break;
                 case 5:
+                    harvest();
+
+
+                    //DODAC FUNKCJONALNOSC HARVEST()
+                    break;
+                case 6:
                     MainGame();
                     //dodać outcome - progress
                     //dodac czas
+                    timeProgress +=1;
+                    System.out.println("No to tydzień dalej");
+
                     //Powrót o tydzien pozniej
                     break;
-                case 6:
+                case 7:
                     System.out.println("Koniec gry");
                     break;
             }
@@ -187,7 +202,34 @@ public class Game {
         return wybor;
     }
 
+    //////////////////////////////////////////////
 
+    public void harvest(){
+        System.out.println("-----------------------------------");
+        System.out.println("Cóż trzeba zebrać tylko co?");
+        System.out.println("1. Plony");
+        System.out.println("2. Zbiory zwierzęce");
+        Harvesting har = new Harvesting();
+        int wyborDzialania;
+        wyborDzialania = menu2();
+        switch (wyborDzialania) {
+            case 1:
+                har.harvestPlant();
+
+
+                break;
+
+            case 2:
+                har.harvestAnimal();
+
+                break;
+
+        }
+        MainGame();
+
+
+
+    }
 
 
 

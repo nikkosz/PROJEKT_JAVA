@@ -6,4 +6,8 @@ public class Planting {
     public int ile;
     public int growTime;
 
+    public void planting(){
+
+    }
+
 }

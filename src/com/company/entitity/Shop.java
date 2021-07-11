@@ -9,4 +9,12 @@ public class Shop extends Inventory{
     public Integer stock;
 
 
+    public void shop(){
+
+        //dodać sklep
+    }
+
+
+
+
 }
